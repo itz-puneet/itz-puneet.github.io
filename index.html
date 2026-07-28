@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Puneet Deshwani - Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..500;1,6..72,200..500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #EFEAE1; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 40; opacity: .30; mix-blend-mode: multiply; background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMjAnIGhlaWdodD0nMTIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nLjknIG51bU9jdGF2ZXM9JzQnIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0nMTIwJyBoZWlnaHQ9JzEyMCcgZmlsdGVyPSd1cmwoI24pJy8+PC9zdmc+"); background-size: 120px 120px; }
+  a { color: #C4462B; text-decoration: none; transition: color 0.2s; }
+  a:hover { color: #14120F; }
+  ::selection { background: #C4462B; color: #F4F1EA; }
+  summary::-webkit-details-marker { display: none; }
+  details > summary { list-style: none; cursor: pointer; transition: background 0.2s; }
+  details > summary:hover { background: rgba(196,70,43,.05); }
+  @keyframes clipUp { from { clip-path: inset(108% 0 -8% 0); transform: translateY(.16em); } to { clip-path: inset(-30% 0 -12% 0); transform: none; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes drawX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes growBar { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  @keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  @keyframes penDown { from { transform: translateY(0); } to { transform: translateY(calc(100vh - 96px)); } }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: .12; } }
+  @keyframes panelIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+  @keyframes crossIn { from { opacity: 0; transform: scale(.4) rotate(-25deg); } to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+<div style="position:relative;min-height:100vh;background:#EFEAE1;color:#14120F;font-family:'Newsreader',Georgia,serif;font-weight:300;overflow-x:hidden">
+
+  <!-- Background grid layer -->
+  <div style="position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(20,18,15,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(20,18,15,.05) 1px,transparent 1px),linear-gradient(rgba(20,18,15,.085) 1px,transparent 1px),linear-gradient(90deg,rgba(20,18,15,.085) 1px,transparent 1px);background-size:26px 26px,26px 26px,130px 130px,130px 130px;background-position:center top;mask-image:radial-gradient(115% 85% at 50% 12%,#000 30%,transparent 88%);animation:fade 1.6s ease .2s both"></div>
+
+  <!-- Drafting lines -->
+  <div style="position:fixed;top:96px;left:26px;bottom:0;width:1px;z-index:12;pointer-events:none;background:rgba(20,18,15,.14)"></div>
+  <div style="position:fixed;top:96px;left:20px;z-index:13;pointer-events:none;animation:penDown linear both;animation-timeline:scroll(root)">
+    <div style="width:13px;height:1px;background:#C4462B"></div>
+    <div style="position:absolute;top:-3px;left:5px;width:7px;height:7px;border:1px solid #C4462B;border-radius:50%;background:#EFEAE1"></div>
+  </div>
+  <div style="position:fixed;top:96px;left:26px;width:1px;height:calc(100vh - 96px);z-index:12;pointer-events:none;background:#C4462B;transform-origin:top;animation:growY linear both;animation-timeline:scroll(root);opacity:.5"></div>
+
+  <header style="position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding:11px 26px;background:rgba(239,234,225,.86);backdrop-filter:blur(7px);border-bottom:1px solid rgba(20,18,15,.16);font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase">
+    <div style="display:flex;gap:14px;align-items:center;color:rgba(20,18,15,.6)">
+      <span style="color:#14120F">P. Deshwani</span>
+      <span style="color:rgba(20,18,15,.3)">/</span>
+      <span>M.Tech · CSE · IIITM Gwalior</span>
+    </div>
+    <nav style="display:flex;gap:18px;justify-self:center">
+      <a href="#abstract" style="color:rgba(20,18,15,.6)">01 Abstract</a>
+      <a href="#work" style="color:rgba(20,18,15,.6)">02 Work</a>
+      <a href="#methods" style="color:rgba(20,18,15,.6)">03 Methods</a>
+      <a href="#record" style="color:rgba(20,18,15,.6)">04 Record</a>
+      <a href="#contact" style="color:rgba(20,18,15,.6)">05 Contact</a>
+    </nav>
+    <div style="justify-self:end;display:flex;gap:10px;align-items:center;color:rgba(20,18,15,.6)">
+      <span style="width:5px;height:5px;border-radius:50%;background:#C4462B;animation:blink 2.4s ease-in-out infinite"></span>
+      <span>IST</span>
+      <span id="ps-clock" style="color:#14120F;font-variant-numeric:tabular-nums">--:--:--</span>
+    </div>
+  </header>
+
+  <section style="position:relative;z-index:5;padding:0 26px 0 78px;max-width:1560px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:64px;align-items:end;padding:88px 0 54px;border-bottom:1px solid rgba(20,18,15,.16)">
+
+      <div>
+        <div style="display:flex;align-items:center;gap:14px;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#C4462B;animation:fade .8s ease .05s both">
+          <span>Sheet 00 — Identity</span>
+          <span style="height:1px;flex:1;max-width:130px;background:#C4462B;transform-origin:left;animation:drawX .9s cubic-bezier(.2,.9,.2,1) .25s both"></span>
+          <span style="color:rgba(20,18,15,.45)">Rev. 07.2026</span>
+        </div>
+
+        <h1 style="margin:22px 0 0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(58px,10.4vw,168px);line-height:.84;letter-spacing:-.02em">
+          <span style="display:block;overflow:hidden"><span style="display:block;animation:clipUp 1.05s cubic-bezier(.16,1,.3,1) .1s both">Puneet</span></span>
+          <span style="display:block;overflow:hidden"><span style="display:block;font-style:italic;padding-left:.09em;animation:clipUp 1.05s cubic-bezier(.16,1,.3,1) .22s both">Deshwani</span></span>
+        </h1>
+
+        <div style="display:flex;align-items:flex-start;gap:20px;margin:34px 0 0;max-width:640px;animation:rise .9s cubic-bezier(.16,1,.3,1) .5s both">
+          <span style="margin-top:.62em;width:30px;height:1px;background:#14120F;flex:none"></span>
+          <p style="margin:0;font-size:clamp(19px,1.5vw,25px);line-height:1.38;letter-spacing:-.01em">I build context-aware systems — focusing on <em style="font-style:italic;color:#C4462B">Generative AI, RAG, and agentic systems</em> to bridge the gap between large language models and real-world impact.</p>
+        </div>
+
+        <dl style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:44px 0 0;border-top:1px solid rgba(20,18,15,.16);animation:rise .9s cubic-bezier(.16,1,.3,1) .66s both">
+          <div style="padding:14px 16px 4px 0;border-right:1px solid rgba(20,18,15,.12)">
+            <dt style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,18,15,.45)">Programme</dt>
+            <dd style="margin:8px 0 0;font-size:16px">M.Tech, CSE</dd>
+          </div>
+          <div style="padding:14px 16px 4px;border-right:1px solid rgba(20,18,15,.12)">
+            <dt style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,18,15,.45)">Institution</dt>
+            <dd style="margin:8px 0 0;font-size:16px">IIITM Gwalior</dd>
+          </div>
+          <div style="padding:14px 16px 4px;border-right:1px solid rgba(20,18,15,.12)">
+            <dt style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,18,15,.45)">Role</dt>
+            <dd style="margin:8px 0 0;font-size:16px">GenAI / ML Engineer</dd>
+          </div>
+          <div style="padding:14px 0 4px 16px">
+            <dt style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,18,15,.45)">Available</dt>
+            <dd style="margin:8px 0 0;font-size:16px;color:#C4462B">2027 · full-time</dd>
+          </div>
+        </dl>
+      </div>
+
+      <figure style="margin:0;position:relative;animation:rise 1s cubic-bezier(.16,1,.3,1) .42s both">
+        <div style="position:absolute;top:-30px;right:0;display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,18,15,.4)">
+          <span style="width:1px;height:9px;background:rgba(20,18,15,.3)"></span>
+          <span style="width:78px;height:1px;background:rgba(20,18,15,.3)"></span>
+          <span>Plate 01</span>
+          <span style="width:78px;height:1px;background:rgba(20,18,15,.3)"></span>
+          <span style="width:1px;height:9px;background:rgba(20,18,15,.3)"></span>
+        </div>
+
+        <div style="border:1px solid rgba(20,18,15,.5);background:#F7F5F0;box-shadow:14px 14px 0 rgba(20,18,15,.05)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 14px;border-bottom:1px solid rgba(20,18,15,.28);font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase">
+            <span>Fig. 01 — GitHub Contributions</span>
+            <span style="color:rgba(20,18,15,.45);letter-spacing:.1em">itz-puneet</span>
+          </div>
+
+          <div style="position:relative;height:274px;padding:22px 16px; display:flex; justify-content:center; align-items:center; overflow:hidden;">
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=itz-puneet&hide_border=true&theme=tokyonight" alt="GitHub streak" style="width:100%; max-height:100%; object-fit:contain; filter:grayscale(100%) contrast(1.2) opacity(0.85); mix-blend-mode: multiply;"/>
+          </div>
+        </div>
+        <figcaption style="margin:12px 2px 0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;line-height:1.7;letter-spacing:.06em;color:rgba(20,18,15,.5)">Consistent contributions demonstrating continuous learning and project development.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Ticker section -->
+  <div style="position:relative;z-index:5;overflow:hidden;border-bottom:1px solid rgba(20,18,15,.16);background:#14120F;color:#EFEAE1;padding:11px 0">
+    <div style="display:flex;width:max-content;animation:ticker 34s linear infinite;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase">
+      <span style="display:flex;gap:26px;padding-right:26px"><span>Generative AI</span><span style="color:#C4462B">✳</span><span>Retrieval-Augmented Generation</span><span style="color:#C4462B">✳</span><span>LangChain & LangGraph</span><span style="color:#C4462B">✳</span><span>Qdrant Vector DB</span><span style="color:#C4462B">✳</span><span>LiteLLM</span><span style="color:#C4462B">✳</span><span>Next.js & TypeScript</span><span style="color:#C4462B">✳</span><span>FastAPI & Python</span><span style="color:#C4462B">✳</span></span>
+      <span style="display:flex;gap:26px;padding-right:26px" aria-hidden="true"><span>Generative AI</span><span style="color:#C4462B">✳</span><span>Retrieval-Augmented Generation</span><span style="color:#C4462B">✳</span><span>LangChain & LangGraph</span><span style="color:#C4462B">✳</span><span>Qdrant Vector DB</span><span style="color:#C4462B">✳</span><span>LiteLLM</span><span style="color:#C4462B">✳</span><span>Next.js & TypeScript</span><span style="color:#C4462B">✳</span><span>FastAPI & Python</span><span style="color:#C4462B">✳</span></span>
+    </div>
+  </div>
+
+  <section id="abstract" style="position:relative;z-index:5;padding:0 26px 0 78px;max-width:1560px;margin:0 auto;scroll-margin-top:70px">
+    <div style="display:grid;grid-template-columns:minmax(0,.3fr) minmax(0,.7fr);gap:64px;padding:78px 0;border-bottom:1px solid rgba(20,18,15,.16)">
+      <div style="animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 4% cover 26%">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#C4462B">01 — Abstract</div>
+        <div style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(20,18,15,.16);font-family:'IBM Plex Mono',monospace;font-size:10px;line-height:2;letter-spacing:.06em;color:rgba(20,18,15,.55)">
+          <div>Current Focus</div>
+          <div style="color:#14120F;margin-top:6px">“Developing context-aware conversational agents utilizing Vector DBs and LLM orchestration.”</div>
+          <div style="margin-top:14px">Location — Gwalior, IN</div>
+          <div>Interests — RAG, Full-Stack, Problem Solving</div>
+        </div>
+      </div>
+
+      <div style="animation:rise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 4% cover 30%">
+        <p style="margin:0;font-size:clamp(20px,1.66vw,27px);line-height:1.5;letter-spacing:-.012em">
+          <span style="float:left;font-family:'Instrument Serif',Georgia,serif;font-size:5.1em;line-height:.78;padding:.04em .12em 0 0;color:#C4462B">A</span>s a developer, my passion lies in bringing artificial intelligence out of academic sandboxes and applying it to build useful systems. I focus on bridging modern LLMs with user-specific data to solve complex, real-world conversational scenarios.
+        </p>
+        <p style="margin:26px 0 0;font-size:17.5px;line-height:1.66;color:rgba(20,18,15,.72);max-width:62ch">
+          I regularly architect systems combining LangChain and Qdrant to synthesize responses from varied data sources, delivering robust RAG-based applications. While AI provides the intelligence, a great application also needs solid foundations, which is why I continually hone my full-stack web development skills with Next.js and FastAPI. My leadership as the Executive Secretary of the CS Students Council has also taught me how to manage events and engage the tech community effectively.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:28px;margin:34px 0 0;padding-top:22px;border-top:1px solid rgba(20,18,15,.16)">
+          <div><div style="font-family:'Instrument Serif',Georgia,serif;font-size:46px;line-height:1">1508</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,18,15,.5);margin-top:4px">LeetCode Rating</div></div>
+          <div><div style="font-family:'Instrument Serif',Georgia,serif;font-size:46px;line-height:1">200+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,18,15,.5);margin-top:4px">DSA Problems</div></div>
+          <div><div style="font-family:'Instrument Serif',Georgia,serif;font-size:46px;line-height:1">3054</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,18,15,.5);margin-top:4px">Global Rank (CodeVita)</div></div>
+          <div><div style="font-family:'Instrument Serif',Georgia,serif;font-size:46px;line-height:1">400+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,18,15,.5);margin-top:4px">Event Participants Managed</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="position:relative;z-index:5;padding:0 26px 0 78px;max-width:1560px;margin:0 auto;scroll-margin-top:70px">
+    <div style="padding:74px 0 0">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap">
+        <h2 style="margin:0;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(38px,4.6vw,74px);line-height:1;letter-spacing:-.02em;animation:rise .8s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 2% cover 22%">02 — Selected work</h2>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,18,15,.5)">Two of multiple · click a row to open</div>
+      </div>
+
+      <div style="margin-top:38px">
+
+        <details open="open" style="border-top:1px solid rgba(20,18,15,.28)">
+          <summary>
+            <div style="display:grid;grid-template-columns:66px minmax(0,1fr) minmax(0,.9fr) 92px;gap:26px;align-items:baseline;padding:26px 4px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.1em;color:#C4462B">01</span>
+              <span style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(28px,2.5vw,40px);line-height:1.05;letter-spacing:-.015em">iiitm-rag-chatbot</span>
+              <span style="font-size:16px;line-height:1.45;color:rgba(20,18,15,.72)">A context-aware chatbot for university queries powered by LlamaIndex, Qdrant Vector DB, and LiteLLM.</span>
+              <span style="justify-self:end;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,18,15,.45);text-align:right">RAG<br />2024</span>
+            </div>
+          </summary>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.82fr);gap:40px;padding:2px 4px 44px 92px;animation:panelIn .45s cubic-bezier(.16,1,.3,1) both">
+            <div>
+              <p style="margin:0;font-size:17px;line-height:1.62;color:rgba(20,18,15,.8)">Navigating complex university documentation and policies can be tedious. I built this RAG-based chatbot to digest the university's data sources and intelligently answer student inquiries in natural language, pulling exact context snippets directly from indexed documents.</p>
+              <ul style="margin:22px 0 0;padding:0;list-style:none;display:grid;gap:11px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.5;letter-spacing:.03em">
+                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Uses Qdrant for fast and scalable vector semantic search.</span></li>
+                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>LiteLLM provides a flexible abstraction over various LLM backends.</span></li>
+                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Built in Python using FastAPI for robust backend serving.</span></li>
+              </ul>
+              <div style="display:flex;flex-wrap:wrap;gap:7px;margin:24px 0 0">
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Python</span>
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">LlamaIndex</span>
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Qdrant</span>
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">LiteLLM</span>
+              </div>
+              <div style="margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase"><a href="https://github.com/itz-puneet/iiitm-rag-chatbot" target="_blank">View on GitHub ↗</a></div>
+            </div>
+            <figure style="margin:0">
+              <div style="border:1px solid rgba(20,18,15,.5);padding:7px;background:#F7F5F0;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3">
+                 <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(20,18,15,.4)">[ Chatbot CLI Output ]</div>
+              </div>
+              <figcaption style="margin:9px 0 0;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,18,15,.5)">Fig. 02 — RAG answering workflow</figcaption>
+            </figure>
+          </div>
+        </details>
+
+        <details style="border-top:1px solid rgba(20,18,15,.28); border-bottom:1px solid rgba(20,18,15,.28)">
+          <summary>
+             <div style="display:grid;grid-template-columns:66px minmax(0,1fr) minmax(0,.9fr) 92px;gap:26px;align-items:baseline;padding:26px 4px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.1em;color:#C4462B">02</span>
+              <span style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(28px,2.5vw,40px);line-height:1.05;letter-spacing:-.015em">e-fantasy-app</span>
+              <span style="font-size:16px;line-height:1.45;color:rgba(20,18,15,.72)">A high-performance full-stack web application for creating fantasy teams and tracking real-time scores.</span>
+              <span style="justify-self:end;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(20,18,15,.45);text-align:right">Full Stack<br />2024</span>
+             </div>
+          </summary>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.82fr);gap:40px;padding:2px 4px 44px 92px;animation:panelIn .45s cubic-bezier(.16,1,.3,1) both">
+            <div>
+              <p style="margin:0;font-size:17px;line-height:1.62;color:rgba(20,18,15,.8)">A competitive fantasy sports platform requires handling rapid state changes and maintaining responsive UIs during live events. This platform allows users to build teams, join contests, and see score updates leveraging a robust Next.js frontend with Redis caching.</p>
+              <ul style="margin:22px 0 0;padding:0;list-style:none;display:grid;gap:11px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.5;letter-spacing:.03em">
+                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Next.js with TypeScript for type-safe, server-rendered UIs.</span></li>
+                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Redis caching to handle leaderboard and point recalculations smoothly.</span></li>
+                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Node.js backend with styled-components via Tailwind CSS.</span></li>
+              </ul>
+              <div style="display:flex;flex-wrap:wrap;gap:7px;margin:24px 0 0">
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">TypeScript</span>
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Next.js</span>
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Node.js</span>
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Redis</span>
+              </div>
+              <div style="margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase"><a href="https://github.com/itz-puneet/e-fantasy-app" target="_blank">View on GitHub ↗</a></div>
+            </div>
+            <figure style="margin:0">
+              <div style="border:1px solid rgba(20,18,15,.5);padding:7px;background:#F7F5F0;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3">
+                 <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(20,18,15,.4)">[ Web App UI Dashboard ]</div>
+              </div>
+              <figcaption style="margin:9px 0 0;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,18,15,.5)">Fig. 03 — Team selection screen</figcaption>
+            </figure>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="methods" style="position:relative;z-index:5;padding:0 26px 0 78px;max-width:1560px;margin:0 auto;scroll-margin-top:70px">
+    <div style="display:grid;grid-template-columns:minmax(0,.3fr) minmax(0,.7fr);gap:64px;padding:78px 0;border-bottom:1px solid rgba(20,18,15,.16)">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#C4462B">03 — Materials &amp; methods</div>
+        <p style="margin:18px 0 0;font-size:16px;line-height:1.6;color:rgba(20,18,15,.66);max-width:34ch">A breakdown of the tools and libraries I rely on to ship AI features and full-stack applications.</p>
+      </div>
+      <div style="display:grid;gap:0">
+
+        <div style="display:grid;grid-template-columns:150px minmax(0,1fr) 54px;gap:22px;align-items:center;padding:15px 0;border-top:1px solid rgba(20,18,15,.16);animation:rise .7s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 18%">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase">Python</span>
+          <span style="position:relative;height:9px;background:rgba(20,18,15,.07)"><span style="position:absolute;inset:0 10% 0 0;background:#14120F;transform-origin:left;animation:drawX 1.1s cubic-bezier(.2,.9,.2,1) both;animation-timeline:view();animation-range:entry 0% cover 24%"></span></span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(20,18,15,.5);text-align:right">90</span>
+        </div>
+        <div style="display:grid;grid-template-columns:150px minmax(0,1fr) 54px;gap:22px;align-items:center;padding:15px 0;border-top:1px solid rgba(20,18,15,.16)">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#C4462B">LangChain · RAG</span>
+          <span style="position:relative;height:9px;background:rgba(20,18,15,.07)"><span style="position:absolute;inset:0 15% 0 0;background:#C4462B;transform-origin:left;animation:drawX 1.1s cubic-bezier(.2,.9,.2,1) .06s both;animation-timeline:view();animation-range:entry 0% cover 24%"></span></span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(20,18,15,.5);text-align:right">85</span>
+        </div>
+        <div style="display:grid;grid-template-columns:150px minmax(0,1fr) 54px;gap:22px;align-items:center;padding:15px 0;border-top:1px solid rgba(20,18,15,.16)">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase">TypeScript · JS</span>
+          <span style="position:relative;height:9px;background:rgba(20,18,15,.07)"><span style="position:absolute;inset:0 18% 0 0;background:#14120F;transform-origin:left;animation:drawX 1.1s cubic-bezier(.2,.9,.2,1) .12s both;animation-timeline:view();animation-range:entry 0% cover 24%"></span></span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(20,18,15,.5);text-align:right">82</span>
+        </div>
+        <div style="display:grid;grid-template-columns:150px minmax(0,1fr) 54px;gap:22px;align-items:center;padding:15px 0;border-top:1px solid rgba(20,18,15,.16)">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase">Next.js · React</span>
+          <span style="position:relative;height:9px;background:rgba(20,18,15,.07)"><span style="position:absolute;inset:0 22% 0 0;background:#14120F;transform-origin:left;animation:drawX 1.1s cubic-bezier(.2,.9,.2,1) .18s both;animation-timeline:view();animation-range:entry 0% cover 24%"></span></span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(20,18,15,.5);text-align:right">78</span>
+        </div>
+        <div style="display:grid;grid-template-columns:150px minmax(0,1fr) 54px;gap:22px;align-items:center;padding:15px 0;border-top:1px solid rgba(20,18,15,.16)">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase">FastAPI</span>
+          <span style="position:relative;height:9px;background:rgba(20,18,15,.07)"><span style="position:absolute;inset:0 26% 0 0;background:#14120F;transform-origin:left;animation:drawX 1.1s cubic-bezier(.2,.9,.2,1) .24s both;animation-timeline:view();animation-range:entry 0% cover 24%"></span></span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(20,18,15,.5);text-align:right">74</span>
+        </div>
+        <div style="display:grid;grid-template-columns:150px minmax(0,1fr) 54px;gap:22px;align-items:center;padding:15px 0;border-top:1px solid rgba(20,18,15,.16);border-bottom:1px solid rgba(20,18,15,.16)">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase">C / C++</span>
+          <span style="position:relative;height:9px;background:rgba(20,18,15,.07)"><span style="position:absolute;inset:0 30% 0 0;background:#14120F;transform-origin:left;animation:drawX 1.1s cubic-bezier(.2,.9,.2,1) .3s both;animation-timeline:view();animation-range:entry 0% cover 24%"></span></span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(20,18,15,.5);text-align:right">70</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:34px">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(20,18,15,.45);padding-bottom:8px;border-bottom:1px solid rgba(20,18,15,.16)">Vector DBs</div>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.55">Qdrant, Redis — for fast similarity search and semantic retrieval.</p>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(20,18,15,.45);padding-bottom:8px;border-bottom:1px solid rgba(20,18,15,.16)">Frameworks</div>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.55">LlamaIndex, LiteLLM, LangGraph for robust agentic workflows.</p>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(20,18,15,.45);padding-bottom:8px;border-bottom:1px solid rgba(20,18,15,.16)">Deployment</div>
+            <p style="margin:10px 0 0;font-size:15px;line-height:1.55">Docker containers and cloud deployment practices for scalable apps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="record" style="position:relative;z-index:5;padding:0 26px 0 78px;max-width:1560px;margin:0 auto;scroll-margin-top:70px">
+    <div style="display:grid;grid-template-columns:minmax(0,.3fr) minmax(0,.7fr);gap:64px;padding:78px 0;border-bottom:1px solid rgba(20,18,15,.16)">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#C4462B">04 — Record</div>
+      <div style="display:grid;gap:0">
+        <div style="display:grid;grid-template-columns:118px minmax(0,1fr);gap:24px;padding:18px 0;border-top:1px solid rgba(20,18,15,.16);align-items:baseline">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:rgba(20,18,15,.5)">2025 — 2027</span>
+          <span><span style="font-family:'Instrument Serif',Georgia,serif;font-size:26px">M.Tech, Computer Science and Engineering</span><span style="display:block;margin-top:4px;font-size:15.5px;color:rgba(20,18,15,.66)">IIITM Gwalior, India · CGPA: 9.6/10</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:118px minmax(0,1fr);gap:24px;padding:18px 0;border-top:1px solid rgba(20,18,15,.16);align-items:baseline">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:rgba(20,18,15,.5)">May '26 — Jul '26</span>
+          <span><span style="font-family:'Instrument Serif',Georgia,serif;font-size:26px">GenAI Intern, Accenture India</span><span style="display:block;margin-top:4px;font-size:15.5px;color:rgba(20,18,15,.66)">Developed and deployed an end-to-end RAG pipeline combining hybrid retrieval (ChromaDB + BM25) with Claude models.</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:118px minmax(0,1fr);gap:24px;padding:18px 0;border-top:1px solid rgba(20,18,15,.16);align-items:baseline">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:rgba(20,18,15,.5)">2021 — 2025</span>
+          <span><span style="font-family:'Instrument Serif',Georgia,serif;font-size:26px">B.Tech, Computer Science and Engineering</span><span style="display:block;margin-top:4px;font-size:15.5px;color:rgba(20,18,15,.66)">BIET Jhansi, India</span></span>
+        </div>
+        <div style="display:grid;grid-template-columns:118px minmax(0,1fr);gap:24px;padding:18px 0;border-top:1px solid rgba(20,18,15,.16);border-bottom:1px solid rgba(20,18,15,.16);align-items:baseline">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:rgba(20,18,15,.5)">Continuous</span>
+          <span><span style="font-family:'Instrument Serif',Georgia,serif;font-size:26px">Achievements & Leadership</span><span style="display:block;margin-top:4px;font-size:15.5px;color:rgba(20,18,15,.66)">CodeVita Global Rank 3054. 2x Hackathon Runner-up. Exec Sec, CS Students Council.</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" style="position:relative;z-index:5;background:#14120F;color:#EFEAE1;margin-top:0;scroll-margin-top:70px">
+    <div style="padding:96px 26px 32px 78px;max-width:1560px;margin:0 auto">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#C4462B">05 — Contact</div>
+      <p style="margin:26px 0 0;font-family:'Instrument Serif',Georgia,serif;font-size:clamp(36px,5.4vw,86px);line-height:1.02;letter-spacing:-.02em;max-width:24ch">Open to conversations about <span style="font-style:italic;color:#C4462B">GenAI</span>, RAG, and agentic systems.</p>
+
+      <a href="mailto:puneet29.pro@gmail.com" style="display:inline-block;margin:44px 0 0;font-family:'IBM Plex Mono',monospace;font-size:clamp(15px,2vw,26px);letter-spacing:.02em;color:#EFEAE1;border-bottom:1px solid rgba(239,234,225,.35);padding-bottom:6px">puneet29.pro@gmail.com</a>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;margin:64px 0 0;padding-top:22px;border-top:1px solid rgba(239,234,225,.18);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase">
+        <a href="https://github.com/itz-puneet" target="_blank" style="color:rgba(239,234,225,.7)">GitHub ↗</a>
+        <a href="https://linkedin.com/in/puneet-deshwani" target="_blank" style="color:rgba(239,234,225,.7)">LinkedIn ↗</a>
+        <a href="https://leetcode.com/u/user0241XW/" target="_blank" style="color:rgba(239,234,225,.7)">LeetCode ↗</a>
+        <a href="https://www.codechef.com/users/itz_puneet" target="_blank" style="color:rgba(239,234,225,.7)">CodeChef ↗</a>
+        <span style="color:rgba(239,234,225,.4);justify-self:end">Gwalior, IN · UTC+5:30</span>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:70px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(239,234,225,.35)">
+        <span>Sheet 01 of 01 — set in Instrument Serif &amp; IBM Plex Mono</span>
+        <span>Built from blueprint · rev. 07.2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Crosshairs -->
+  <div style="position:fixed;top:56px;right:22px;z-index:15;pointer-events:none;width:14px;height:14px;animation:crossIn .7s cubic-bezier(.16,1,.3,1) 1.1s both">
+    <div style="position:absolute;top:6.5px;left:0;width:14px;height:1px;background:rgba(20,18,15,.45)"></div>
+    <div style="position:absolute;left:6.5px;top:0;height:14px;width:1px;background:rgba(20,18,15,.45)"></div>
+  </div>
+  <div style="position:fixed;bottom:22px;right:22px;z-index:15;pointer-events:none;width:14px;height:14px;animation:crossIn .7s cubic-bezier(.16,1,.3,1) 1.2s both">
+    <div style="position:absolute;top:6.5px;left:0;width:14px;height:1px;background:rgba(239,234,225,.3);mix-blend-mode:difference"></div>
+    <div style="position:absolute;left:6.5px;top:0;height:14px;width:1px;background:rgba(239,234,225,.3);mix-blend-mode:difference"></div>
+  </div>
+
+  <div style="position:fixed;bottom:18px;left:20px;z-index:16;pointer-events:none;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,18,15,.4);mix-blend-mode:difference;filter:invert(1);animation:fade 1s ease 1.3s both">
+    <span id="ps-cursor">x 0000 · y 0000</span>
+  </div>
+
+</div>
+
+<script>
+  // Clock update
+  function updateClock() {
+    const el = document.getElementById('ps-clock');
+    if (!el) return;
+    const now = new Date();
+    // Offset for IST (UTC+5:30)
+    const ist = new Date(now.getTime() + (now.getTimezoneOffset() + 330) * 60000);
+    const p = (n) => String(n).padStart(2, '0');
+    el.textContent = p(ist.getHours()) + ':' + p(ist.getMinutes()) + ':' + p(ist.getSeconds());
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  // Cursor tracking
+  let raf = 0;
+  function handleMouseMove(e) {
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      raf = 0;
+      const el = document.getElementById('ps-cursor');
+      if (!el) return;
+      const p = (n) => String(Math.round(n)).padStart(4, '0');
+      el.textContent = 'x ' + p(e.clientX) + ' · y ' + p(e.clientY + window.scrollY);
+    });
+  }
+  window.addEventListener('mousemove', handleMouseMove, { passive: true });
+</script>
+</body>
+</html>
