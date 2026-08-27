@@ -189,21 +189,35 @@
               <ul style="margin:22px 0 0;padding:0;list-style:none;display:grid;gap:11px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.5;letter-spacing:.03em">
                 <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Uses Qdrant for fast and scalable vector semantic search.</span></li>
                 <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>LiteLLM provides a flexible abstraction over various LLM backends.</span></li>
+                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Interactive Streamlit UI with cross-encoder reranking and source citation.</span></li>
                 <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Built in Python using FastAPI for robust backend serving.</span></li>
               </ul>
               <div style="display:flex;flex-wrap:wrap;gap:7px;margin:24px 0 0">
                 <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Python</span>
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Streamlit</span>
                 <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">LlamaIndex</span>
                 <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Qdrant</span>
                 <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">LiteLLM</span>
               </div>
-              <div style="margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase"><a href="https://github.com/itz-puneet/iiitm-rag-chatbot" target="_blank">View on GitHub ↗</a></div>
+              <div style="margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;display:flex;flex-wrap:wrap;gap:20px;align-items:center">
+                <a href="https://iiitm-chatbot.streamlit.app/" target="_blank" style="color:#C4462B;font-weight:600">Live Demo ↗</a>
+                <a href="https://github.com/itz-puneet/iiitm-rag-chatbot" target="_blank">View on GitHub ↗</a>
+              </div>
             </div>
             <figure style="margin:0">
-              <div style="border:1px solid rgba(20,18,15,.5);padding:7px;background:#F7F5F0;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3">
-                 <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(20,18,15,.4)">[ Chatbot CLI Output ]</div>
+              <div style="border:1px solid rgba(20,18,15,.5);background:#F7F5F0;box-shadow:12px 12px 0 rgba(20,18,15,.05);overflow:hidden">
+                <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 12px;border-bottom:1px solid rgba(20,18,15,.25);font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:#F0ECE3">
+                  <span>Plate 02 — Web Assistant UI</span>
+                  <a href="https://iiitm-chatbot.streamlit.app/" target="_blank" style="color:rgba(20,18,15,.5)">iiitm-chatbot.streamlit.app ↗</a>
+                </div>
+                <a href="https://iiitm-chatbot.streamlit.app/" target="_blank" style="display:block;overflow:hidden;line-height:0">
+                  <img src="assets/iiitm-rag-chatbot.png" alt="ABV-IIITM College Assistant Streamlit Demo" style="width:100%;height:auto;display:block;transition:transform .3s ease, opacity .2s ease;" onmouseover="this.style.transform='scale(1.015)';this.style.opacity='0.95'" onmouseout="this.style.transform='none';this.style.opacity='1'" />
+                </a>
               </div>
-              <figcaption style="margin:9px 0 0;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,18,15,.5)">Fig. 02 — RAG answering workflow</figcaption>
+              <figcaption style="margin:10px 2px 0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(20,18,15,.5);display:flex;justify-content:space-between;align-items:center">
+                <span>Fig. 02 — RAG answering workflow &amp; search filters</span>
+                <a href="https://iiitm-chatbot.streamlit.app/" target="_blank" style="color:#C4462B">Launch App ↗</a>
+              </figcaption>
             </figure>
           </div>
         </details>
