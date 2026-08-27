@@ -233,25 +233,45 @@
           </summary>
           <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.82fr);gap:40px;padding:2px 4px 44px 92px;animation:panelIn .45s cubic-bezier(.16,1,.3,1) both">
             <div>
-              <p style="margin:0;font-size:17px;line-height:1.62;color:rgba(20,18,15,.8)">A competitive fantasy sports platform requires handling rapid state changes and maintaining responsive UIs during live events. This platform allows users to build teams, join contests, and see score updates leveraging a robust Next.js frontend with Redis caching.</p>
+              <p style="margin:0;font-size:17px;line-height:1.62;color:rgba(20,18,15,.8)">A competitive esports fantasy platform handling rapid state changes and responsive mobile-first UIs during live tournaments. Users can track BGMI and Valorant fixtures, enter contest pools, build custom rosters, and manage virtual E-Tokens seamlessly.</p>
               <ul style="margin:22px 0 0;padding:0;list-style:none;display:grid;gap:11px;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.5;letter-spacing:.03em">
-                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Next.js with TypeScript for type-safe, server-rendered UIs.</span></li>
-                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Redis caching to handle leaderboard and point recalculations smoothly.</span></li>
+                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Next.js with TypeScript for responsive, mobile-first server-rendered UIs.</span></li>
+                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Redis caching to handle real-time leaderboard and point recalculations smoothly.</span></li>
+                <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Interactive in-app E-Tokens wallet with match entry &amp; reward transaction tracking.</span></li>
                 <li style="display:grid;grid-template-columns:16px 1fr;gap:12px"><span style="color:#C4462B">→</span><span>Node.js backend with styled-components via Tailwind CSS.</span></li>
               </ul>
               <div style="display:flex;flex-wrap:wrap;gap:7px;margin:24px 0 0">
                 <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">TypeScript</span>
                 <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Next.js</span>
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">React</span>
                 <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Node.js</span>
                 <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Redis</span>
+                <span style="border:1px solid rgba(20,18,15,.3);padding:5px 10px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase">Tailwind CSS</span>
               </div>
               <div style="margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase"><a href="https://github.com/itz-puneet/e-fantasy-app" target="_blank">View on GitHub ↗</a></div>
             </div>
             <figure style="margin:0">
-              <div style="border:1px solid rgba(20,18,15,.5);padding:7px;background:#F7F5F0;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3">
-                 <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(20,18,15,.4)">[ Web App UI Dashboard ]</div>
+              <div style="border:1px solid rgba(20,18,15,.5);background:#F7F5F0;box-shadow:12px 12px 0 rgba(20,18,15,.05);overflow:hidden">
+                <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 12px;border-bottom:1px solid rgba(20,18,15,.25);font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:#F0ECE3">
+                  <span>Plate 03 — Mobile Application UI</span>
+                  <span style="color:rgba(20,18,15,.45)">3 Views · Esports Roster &amp; Wallet</span>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px;background:#EAE5DC">
+                  <div style="border:1px solid rgba(20,18,15,.25);border-radius:10px;overflow:hidden;background:#F8F9FA;box-shadow:0 2px 6px rgba(20,18,15,.08);transition:transform .25s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'">
+                    <img src="assets/e-fantasy-matches.png" alt="Match Listings Screen" style="width:100%;height:auto;display:block;" />
+                  </div>
+                  <div style="border:1px solid rgba(20,18,15,.25);border-radius:10px;overflow:hidden;background:#F8F9FA;box-shadow:0 2px 6px rgba(20,18,15,.08);transition:transform .25s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'">
+                    <img src="assets/e-fantasy-contest.png" alt="Contest &amp; Prize Pool Screen" style="width:100%;height:auto;display:block;" />
+                  </div>
+                  <div style="border:1px solid rgba(20,18,15,.25);border-radius:10px;overflow:hidden;background:#F8F9FA;box-shadow:0 2px 6px rgba(20,18,15,.08);transition:transform .25s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'">
+                    <img src="assets/e-fantasy-wallet.png" alt="Wallet &amp; Token Screen" style="width:100%;height:auto;display:block;" />
+                  </div>
+                </div>
               </div>
-              <figcaption style="margin:9px 0 0;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(20,18,15,.5)">Fig. 03 — Team selection screen</figcaption>
+              <figcaption style="margin:10px 2px 0;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:rgba(20,18,15,.5);display:flex;justify-content:space-between;align-items:center">
+                <span>Fig. 03 — Matches feed · contest pool · token wallet</span>
+                <a href="https://github.com/itz-puneet/e-fantasy-app" target="_blank" style="color:#C4462B">View Code ↗</a>
+              </figcaption>
             </figure>
           </div>
         </details>
